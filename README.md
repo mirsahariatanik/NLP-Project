@@ -1,9 +1,13 @@
 # NLP-Project
 
 
-Implemented a calendar management tool using Google speech processing system and a dialogue act classifier with a sequence labeler system. The speech processing block convert the speech to text file. The input to the NLP part is a sequence of words and the output is a frame containing the key information to schedule the event in the calender. 
+Implemented a calendar management tool using Google speech processing system and a dialogue act classifier with a sequence labeler system. The speech processing block convert the speech to text file. The input to the NLP part is a sequence of words and the output is a frame containing the key information to schedule the event in the calender.
+
+To convert the speech to text, use "asr.py". There are some speech samples available from training_1.mp3 to training_30.mp3.
+
+The varieties of NLP datasets can be generated with files nlp.py to nlp7.py. 
  
-First, I am implemented an RNN+CRF based encoder for labeling and slot filling. For each word, the encoder predict highest-scoring label for that word. Implemented a labeler that just guesses, for each word, the label with the highest probability for that word.
+First, I have implemented an RNN+CRF based encoder for labeling and slot filling. For each word, the encoder predict highest-scoring label for that word. Implemented a labeler that just guesses, for each word, the label with the highest probability for that word.
 
 To replace all words seen only once in the BIO training data "train_bio.txt" with unk, use "fourcount.py".
 
@@ -30,6 +34,8 @@ To compute the exact matching accuracy score, run "python3 score_frames.py proje
 The scores of dev dataset are:
 
 exact match:         0.74625
+
 frame type accuracy: 1.0
+
 argument F1:         0.9677419354838711
 
