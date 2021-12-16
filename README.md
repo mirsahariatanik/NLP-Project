@@ -39,3 +39,7 @@ frame type accuracy: 1.0
 
 argument F1:         0.9677419354838711
 
+To compare with the baseline, use "baseline.py" and save the data to another file.
+
+I have tried to calculate the exact match score from the output of the basline method, it did not work somehow.
+
