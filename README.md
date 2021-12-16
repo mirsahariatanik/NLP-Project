@@ -3,8 +3,6 @@
 
 Implemented a calendar management tool using Google speech processing system and a dialogue act classifier with a sequence labeler system. The speech processing block convert the speech to text file. The input to the NLP part is a sequence of words and the output is a frame containing the key information to schedule the event in the calender.
 
-To convert the speech to text, use "asr.py" or "speech.py" based on the audio file. There are some speech samples available from training_1.mp3 to training_30.mp3.
-
 The varieties of NLP datasets can be generated with files nlp.py to nlp7.py. 
  
 First, I have implemented an RNN+CRF based encoder for labeling and slot filling. For each word, the encoder predict highest-scoring label for that word. Implemented a labeler that just guesses, for each word, the label with the highest probability for that word.
@@ -38,6 +36,8 @@ exact match:         0.74625
 frame type accuracy: 1.0
 
 argument F1:         0.9677419354838711
+
+To convert the speech to text, use "asr.py" or "speech.py" based on the audio file. There are some speech samples available from training_1.mp3 to training_30.mp3.
 
 To compare with the baseline, use "baseline.py" and save the data to another file.
 
